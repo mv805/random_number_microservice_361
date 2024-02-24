@@ -4,6 +4,7 @@ import { Request, Response } from "express";
 
 const router = express.Router();
 
+//Return an integer between the given min and max query parameters
 router.get("/range", async (req: Request, res: Response) => {
   const min = req.query.min;
   const max = req.query.max;
@@ -23,6 +24,7 @@ router.get("/range", async (req: Request, res: Response) => {
   }
 });
 
+//return an integer between 1 and the given max integer parameter
 router.get("/max/:maxInt", async (req: Request, res: Response) => {
   const maxInt = req.params.maxInt;
 
